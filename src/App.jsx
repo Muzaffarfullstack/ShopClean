@@ -15,14 +15,30 @@ import CartItem from "./components/CartItem";
 import { toast } from "sonner";
 
 // react imports
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const saved = localStorage.getItem("cart");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const clearCart = (e) => {
+    e.preventDefault();
+    setCart([]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addtoCart = (product) => {
     setCart([...cart, product]);
     toast.success("Added to Cart");
+  };
+
+  const deleteItems = (id) => {
+    setCart((prev) => prev.filter((product) => product.id !== id));
   };
 
   const routes = createBrowserRouter([
@@ -53,7 +69,13 @@ function App() {
         },
         {
           path: "/cartItem/",
-          element: <CartItem items={cart} />,
+          element: (
+            <CartItem
+              items={cart}
+              deleteItems={deleteItems}
+              clearCart={clearCart}
+            />
+          ),
         },
       ],
     },

@@ -95,7 +95,13 @@
 .item-price {
   margin: 10px 0;
 }
-.desc {
+.desc,
+.subtotal,
+.tax,
+.shipping,
+.summary-line,
+.final-price,
+.fee {
   margin: 15px 0;
 }
 .description {
@@ -125,4 +131,11 @@
 
 .price-title {
   margin-left: 20px;
+}
+.cartItem-container {
+  max-width: 832px;
+  width: 100%;
+}
+.order-summary {
+  padding: 24px;
 }
