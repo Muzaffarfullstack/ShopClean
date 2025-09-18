@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Bluetooth Headphones",
+    "price": 79.99,
+    "rating": 4.5,
+    "image": "../assets/bluetoth.jpg",
+    "inStock": true,
+    "favorite": false,
+    "description": "Premium wireless headphones with noise cancellation and 30-hour battery life."
+  },
+  {
+    "id": 2,
+    "title": "Minimalist Watch",
+    "price": 129.99,
+    "rating": 4.8,
+    "image": "../assets/watch.jpg",
+    "inStock": true,
+    "favorite": true,
+    "description": "Clean and elegant timepiece with leather strap and Swiss movement."
+  },
+  {
+    "id": 3,
+    "title": "Cotton T-Shirt",
+    "price": 24.99,
+    "rating": 4.3,
+    "image": "../assets/tshirt-u.jpg",
+    "inStock": true,
+    "favorite": false,
+    "description": "Premium organic cotton t-shirt in classic fit."
+  },
+  {
+    "id": 4,
+    "title": "Laptop Stand",
+    "price": 49.99,
+    "rating": 4.6,
+    "image": "../assets/mouse.jpg",
+    "inStock": false,
+    "favorite": true,
+    "description": "Adjustable aluminum laptop stand for better ergonomics."
+  },
+  {
+    "id": 5,
+    "title": "Coffee Mug",
+    "price": 12.99,
+    "rating": 4.1,
+    "image": "../assets/mug.jpeg",
+    "inStock": true,
+    "favorite": false,
+    "description": "Ceramic coffee mug with modern design."
+  },
+  {
+    "id": 6,
+    "title": "Gaming Mouse",
+    "price": 59.99,
+    "rating": 4.7,
+    "image": "../assets/white mouse.jpg",
+    "inStock": true,
+    "favorite": false,
+    "description": "Ergonomic wireless mouse with precision tracking."
+  },
+  {
+    "id": 7,
+    "title": "Mechanical Keyboard",
+    "price": 99.99,
+    "rating": 4.9,
+    "image": "../assets/keyboard.jpg",
+    "inStock": true,
+    "favorite": true,
+    "description": "Durable mechanical switches with customizable RGB lighting."
+  },
+  {
+    "id": 8,
+    "title": "Wireless Speaker",
+    "price": 149.99,
+    "rating": 4.4,
+    "image": "../assets/speaker.jpg",
+    "inStock": true,
+    "favorite": false,
+    "description": "Bluetooth stable connection with deep bass."
+  }
+]
