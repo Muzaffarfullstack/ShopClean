@@ -10,9 +10,9 @@ function Searchbar({ addtoCart }) {
 
   const query = location.state?.query || "";
   const { data } = useFetch("/data/db.json");
+  console.log(data);
 
   const [results, setResults] = useState([]);
-  console.log(results);
 
   useEffect(() => {
     if (!data) return; // ✅ data bo‘lmasa xatolik chiqmasin
@@ -67,7 +67,10 @@ function Searchbar({ addtoCart }) {
                       {item.rating}
                     </small>
                   </div>
-                  <button className="flex border-0 border-gray-500 btn w-[110%] justify-center relative rounded-md cursor-pointer bg-blue-600 text-neutral-50 font-medium">
+                  <button
+                    className="flex border-0 border-gray-500 btn w-[110%] justify-center relative rounded-md cursor-pointer bg-blue-600 text-neutral-50 font-medium"
+                    onClick={() => addtoCart(item)}
+                  >
                     <GrCart className="relative right-2 top-0.5" /> Add to Cart
                   </button>
                 </div>

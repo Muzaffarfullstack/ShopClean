@@ -55,9 +55,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
         </div>
       ) : (
         <div>
-          <h1 className="text-3xl font-bold quantity">
-            Shopping Cart ({} items)
-          </h1>
+          <h1 className="text-3xl font-bold quantity">Shopping Cart</h1>
 
           <div className="cartItem-container flex justify-between">
             <div>
