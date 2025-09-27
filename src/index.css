@@ -42,7 +42,8 @@
 .cart-header {
   margin-top: 100px;
 }
-.cart-container {
+.cart-container,
+.search-container {
   margin-top: 50px;
 }
 .item-title {
@@ -107,7 +108,8 @@
 .description {
   margin-bottom: 10px;
 }
-.quantity {
+.quantity,
+.search-result {
   margin-top: 30px;
 }
 .back-btn {
@@ -138,4 +140,14 @@
 }
 .order-summary {
   padding: 24px;
+}
+.search-btn-back {
+  padding: 5px 15px;
+  margin: 10px 0;
+}
+.info-container {
+  padding: 10px;
+}
+.holder {
+  margin: 10px 0;
 }

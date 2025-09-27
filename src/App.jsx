@@ -12,6 +12,7 @@ import Faq from "./pages/Faq";
 import Error from "./pages/Error";
 import ProductDetail from "./components/ProductDetail";
 import CartItem from "./components/CartItem";
+import Searchbar from "./components/Searchbar";
 import { toast } from "sonner";
 
 // react imports
@@ -23,20 +24,52 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  // increase item in cart
+  const increaseQty = (id) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, qty: item.qty + 1 } : item
+      )
+    );
+  };
+
+  const decreaseQty = (id) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item
+      )
+    );
+  };
+
+  // clear cart
   const clearCart = (e) => {
     e.preventDefault();
     setCart([]);
   };
 
+  // localstorage section
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  // add to cart section
   const addtoCart = (product) => {
-    setCart([...cart, product]);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
+
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+        );
+      } else {
+        return [...prevCart, { ...product, qty: 1 }];
+      }
+    });
+
     toast.success("Added to Cart");
   };
 
+  // delete item
   const deleteItems = (id) => {
     setCart((prev) => prev.filter((product) => product.id !== id));
   };
@@ -74,8 +107,14 @@ function App() {
               items={cart}
               deleteItems={deleteItems}
               clearCart={clearCart}
+              increaseQty={increaseQty}
+              decreaseQty={decreaseQty}
             />
           ),
+        },
+        {
+          path: "/search",
+          element: <Searchbar addtoCart={addtoCart} />,
         },
       ],
     },
