@@ -3,7 +3,7 @@ import Cart from "../components/Cart";
 
 function Home() {
   return (
-    <div className="wrapper">
+    <div className="wrapper sm:overflow-hidden">
       <Intro />
       <Cart />
     </div>

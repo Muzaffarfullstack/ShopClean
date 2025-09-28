@@ -1,8 +1,8 @@
 // react-icons imports
-import { FaRegHeart } from "react-icons/fa";
 import { LiaShoppingCartSolid } from "react-icons/lia";
 import { RiUser3Line } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
+import { FaBars } from "react-icons/fa";
 
 //react-router-dom
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -20,14 +20,14 @@ function Navbar() {
   };
 
   return (
-    <header className="navbar-container relative top-4">
+    <header className="navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
       <nav className="wrapper flex gap-5 items-center">
         <div className="logo">
-          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500">
+          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-base relative left-1">
             ShopClean
           </NavLink>
         </div>
-        <ul className="flex gap-15 ">
+        <ul className="flex gap-15 max-sm:hidden">
           <li>
             <NavLink className="navbar-links text-gray-600 hover:text-blue-500 text-base">
               Home
@@ -51,8 +51,8 @@ function Navbar() {
         </ul>
 
         {/* search bar */}
-        <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative">
-          <CiSearch className="absolute left-3 text-xl font-semibold" />
+        <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative max-sm:max-w-[160px] max-sm:w-[30%] max-sm:h-[20px]">
+          <CiSearch className="absolute left-3 text-xl font-semibold max-sm:text-base" />
           <input
             type="text"
             placeholder="Search products..."
@@ -64,12 +64,12 @@ function Navbar() {
         </div>
 
         {/* favourite, cart, profile */}
-        <div className="navbar-extra flex gap-5 cursor-pointer text-xl  ">
-          <FaRegHeart className="hover:text-blue-500" />
+        <div className="navbar-extra flex gap-5 cursor-pointer text-xl relative max-sm:gap-2 ">
           <Link to="/cartItem/">
-            <LiaShoppingCartSolid className="hover:text-blue-500 text-2xl" />
+            <LiaShoppingCartSolid className="hover:text-blue-500 text-2xl max-sm:text-sm" />
           </Link>
-          <RiUser3Line className="hover:text-blue-500" />
+          <RiUser3Line className="hover:text-blue-500 max-sm:text-sm" />
+          <FaBars className="drop-menu max-sm:block text-sm" />
         </div>
       </nav>
       <hr className="text-gray-300 navbar-line" />
