@@ -19,19 +19,19 @@ function Cart() {
         {isLoading && <p>Loading...</p>}
         {error && <p>{error.message}</p>}
 
-        <div className="cart-container grid grid-cols-4 gap-10 max-sm:flex-col max-sm:flex">
+        <div className="cart-container grid grid-cols-4 gap-10 max-sm:flex-col max-sm:flex max-sm:max-w-[630px]">
           {Array.isArray(data) &&
             data.map((item) => {
               return (
                 <Link
                   to={`product/${item.title}`}
                   key={item.id}
-                  className=" border-0 shadow-lg rounded-xl"
+                  className=" border-0 shadow-lg rounded-xl w-[90%] relative left-2"
                 >
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-4xs h-80 object-cover rounded-t-xl"
+                    className="w-4xs h-80 object-cover rounded-t-xl max-sm:w-[100%]"
                   />
                   <p className="item-title">{item.title}</p>
                   <div className="flex justify-between item-title">
