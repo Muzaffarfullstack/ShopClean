@@ -34,7 +34,7 @@ function ProductDetail({ addtoCart }) {
   if (!selectedItem) return "Product not found";
 
   return (
-    <div className="product-wrapper wrapper">
+    <div className="product-wrapper wrapper overflow-x-hidden">
       <Link
         className="flex back-btn relative left-7 cursor-pointer hover:text-blue-500"
         to="/"

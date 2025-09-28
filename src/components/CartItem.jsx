@@ -23,7 +23,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
   const total = subtotal + tax;
 
   return (
-    <div className="wrap">
+    <div className="wrap overflow-x-hidden">
       <div className="cartItem-btn flex justify-between">
         <Link
           className="flex continue rounded-sm text-gray-500 cursor-pointer hover:bg-gray-300 hover:text-blue-600 transition-all"
