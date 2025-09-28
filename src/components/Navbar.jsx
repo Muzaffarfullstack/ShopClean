@@ -51,12 +51,12 @@ function Navbar() {
         </ul>
 
         {/* search bar */}
-        <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative max-sm:max-w-[160px] max-sm:w-[30%] max-sm:h-[20px]">
+        <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative max-sm:max-w-[160px] max-sm:w-[50%] max-sm:h-[20px]">
           <CiSearch className="absolute left-3 text-xl font-semibold max-sm:text-base max-sm:left-2" />
           <input
             type="text"
             placeholder="Search products..."
-            className="border-0 border-gray-400 w-sm absolute right-6 h-4 outline-0 "
+            className="border-0 border-gray-400 w-sm absolute right-6 h-4 outline-0 max-sm:max-w-[70%] max-sm:placeholder:text-xs"
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             value={input}
