@@ -41,7 +41,7 @@ function Cart() {
                       {item.rating}
                     </p>
                   </div>
-                  <button className="flex btn cart-btn border-0 bg-blue-500 rounded-xl cursor-pointer relative left-9 text-neutral-100  max-sm:w-[80%] ">
+                  <button className="flex btn cart-btn border-0 bg-blue-500 rounded-xl cursor-pointer relative left-9 text-neutral-100 max-sm:w-[80%] justify-center">
                     <IoCartOutline className="cart-btn-logo text-xl" />
                     Add to Cart
                   </button>
