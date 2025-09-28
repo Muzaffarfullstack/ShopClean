@@ -24,7 +24,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
 
   return (
     <div className="wrap">
-      <div className="cartItem-btn flex justify-between">
+      <div className="cartItem-btn flex justify-between max-sm:flex max-sm:justify-around">
         <Link
           className="flex continue rounded-sm text-gray-500 cursor-pointer hover:bg-gray-300 hover:text-blue-600 transition-all"
           to="/"
@@ -41,7 +41,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
 
       {items.length === 0 ? (
         <div className="text-center h-[400px] relative top-20">
-          <BiBox className="text-center relative left-90 text-8xl text-gray-400 flex justify-center" />
+          <BiBox className="text-center relative left-90 text-8xl text-gray-400 " />
           <h1 className="text-3xl font-bold">Your cart is empty</h1>
           <p className="text-gray-400 relative top-2">
             Looks like you haven't added any items to your cart yet.
