@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-import Error from "./pages/Error";
 import ProductDetail from "./components/ProductDetail";
 import CartItem from "./components/CartItem";
 import Searchbar from "./components/Searchbar";
@@ -78,7 +77,6 @@ function App() {
     {
       path: "/",
       element: <MainLayout />,
-      errorElement: <Error />,
       children: [
         {
           index: true,

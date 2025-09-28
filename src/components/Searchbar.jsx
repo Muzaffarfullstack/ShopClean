@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { GrCart } from "react-icons/gr";
 import { FaStar } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
 
 function Searchbar({ addtoCart }) {
   const location = useLocation();
@@ -78,7 +79,20 @@ function Searchbar({ addtoCart }) {
             ))}
           </ul>
         ) : (
-          <p>No items found</p>
+          <div className="flex flex-col items-center h-[400px] top-16 relative">
+            <FiSearch className="w-[64px] h-[64px] text-gray-300" />
+            <p className="text-xl font-semibold">No products found</p>
+            <p className="text-gray-400">
+              We couldn't find any products matching "{query}". Try different
+              keywords.
+            </p>
+            <Link
+              className="border border-blue-500 text-blue-500 btn rounded-md cursor-pointer hover:bg-blue-600 hover:text-neutral-50"
+              to="/"
+            >
+              Clear Filters
+            </Link>
+          </div>
         )}
       </div>
     </div>

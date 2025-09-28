@@ -40,7 +40,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
       </div>
 
       {items.length === 0 ? (
-        <div className="text-center relative -bottom-12 my-1 ">
+        <div className="text-center h-[400px] relative top-20">
           <BiBox className="text-center relative left-90 text-8xl text-gray-400" />
           <h1 className="text-3xl font-bold">Your cart is empty</h1>
           <p className="text-gray-400 relative top-2">
