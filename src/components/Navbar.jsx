@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <header className="navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
-      <nav className="wrapper flex gap-5 items-center">
+      <nav className="wrapper flex gap-5 items-center max-sm:flex justify-between">
         <div className="logo">
           <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-base relative left-1">
             ShopClean
@@ -52,7 +52,7 @@ function Navbar() {
 
         {/* search bar */}
         <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative max-sm:max-w-[160px] max-sm:w-[30%] max-sm:h-[20px]">
-          <CiSearch className="absolute left-3 text-xl font-semibold max-sm:text-base" />
+          <CiSearch className="absolute left-3 text-xl font-semibold max-sm:text-base max-sm:left-2" />
           <input
             type="text"
             placeholder="Search products..."
