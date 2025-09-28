@@ -23,7 +23,7 @@ function Navbar() {
     <header className="navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
       <nav className="wrapper flex gap-5 items-center max-sm:flex justify-between">
         <div className="logo">
-          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-base relative left-2">
+          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-lg relative left-2">
             ShopClean
           </NavLink>
         </div>
@@ -69,7 +69,7 @@ function Navbar() {
             <LiaShoppingCartSolid className="hover:text-blue-500 text-2xl max-sm:text-sm" />
           </Link>
           <RiUser3Line className="hover:text-blue-500 max-sm:text-sm" />
-          <FaBars className="drop-menu max-sm:block text-sm" />
+          <FaBars className="drop-menu max-sm:block text-base" />
         </div>
       </nav>
       <hr className="text-gray-300 navbar-line" />
