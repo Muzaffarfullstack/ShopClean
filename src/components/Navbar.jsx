@@ -21,13 +21,13 @@ function Navbar() {
 
   return (
     <header className="overflow-x-hidden navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
-      <nav className="wrapper flex gap-5 items-center max-sm:flex justify-between">
+      <nav className="wrapper flex gap-5 items-center max-sm:flex justify-between lg:flex lg:justify-around">
         <div className="logo">
-          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-lg relative left-2">
+          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-lg relative left-2 ">
             ShopClean
           </NavLink>
         </div>
-        <ul className="flex gap-15 max-sm:hidden">
+        <ul className="flex gap-15 max-sm:hidden sm:hidden">
           <li>
             <NavLink className="navbar-links text-gray-600 hover:text-blue-500 text-base">
               Home
@@ -51,12 +51,12 @@ function Navbar() {
         </ul>
 
         {/* search bar */}
-        <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative max-sm:max-w-[160px] max-sm:w-[50%] max-sm:h-[20px]">
+        <div className="searchbar border border-gray-800 h-8 rounded-2xl flex items-center w-md relative max-sm:max-w-[160px] max-sm:w-[50%] max-sm:h-[20px] sm:max-w-[300px]">
           <CiSearch className="absolute left-3 text-xl font-semibold max-sm:text-base max-sm:left-2" />
           <input
             type="text"
             placeholder="Search products..."
-            className="border-0 border-gray-400 w-sm absolute right-6 h-4 outline-0 max-sm:max-w-[70%] max-sm:placeholder:text-xs"
+            className="border-0 border-gray-400 w-sm absolute right-6 h-4 outline-0 max-sm:max-w-[70%] max-sm:placeholder:text-xs sm:w-[80%]"
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             value={input}
@@ -69,7 +69,7 @@ function Navbar() {
             <LiaShoppingCartSolid className="hover:text-blue-500 text-2xl max-sm:text-sm" />
           </Link>
           <RiUser3Line className="hover:text-blue-500 max-sm:text-sm" />
-          <FaBars className="drop-menu max-sm:block text-base" />
+          <FaBars className="drop-menu max-sm:block text-base sm:block" />
         </div>
       </nav>
       <hr className="text-gray-300 navbar-line" />

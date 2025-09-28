@@ -19,7 +19,7 @@ function Cart() {
         {isLoading && <p>Loading...</p>}
         {error && <p>{error.message}</p>}
 
-        <div className="cart-container grid grid-cols-4 gap-10 max-sm:flex-col max-sm:flex max-sm:max-w-[630px]">
+        <div className="cart-container grid grid-cols-4 gap-10 max-sm:flex-col max-sm:flex max-sm:max-w-[630px] sm:grid-cols-2 sm:grid lg:grid lg:grid-cols-3">
           {Array.isArray(data) &&
             data.map((item) => {
               return (
@@ -31,7 +31,7 @@ function Cart() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-4xs h-80 object-cover rounded-t-xl max-sm:w-[100%]"
+                    className="w-full h-80 object-cover rounded-t-xl max-sm:w-[100%] "
                   />
                   <p className="item-title">{item.title}</p>
                   <div className="flex justify-between item-title">
@@ -41,7 +41,7 @@ function Cart() {
                       {item.rating}
                     </p>
                   </div>
-                  <button className="flex btn cart-btn border-0 bg-blue-500 rounded-xl cursor-pointer relative left-9 text-neutral-100 max-sm:w-[80%] justify-center">
+                  <button className="flex btn cart-btn border-0 bg-blue-500 rounded-xl cursor-pointer relative left-9 text-neutral-100 max-sm:w-[80%] justify-center sm:w-[80%] md:w-[80%]">
                     <IoCartOutline className="cart-btn-logo text-xl" />
                     Add to Cart
                   </button>

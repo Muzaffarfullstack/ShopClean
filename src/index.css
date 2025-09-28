@@ -151,3 +151,6 @@
 .holder {
   margin: 10px 0;
 }
+.drop-menu {
+  display: none;
+}
