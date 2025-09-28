@@ -9,8 +9,8 @@ function Cart() {
   return (
     <div>
       <div className="cart-header text-center mt-10">
-        <h1 className="text-3xl font-bold">Featured Products</h1>
-        <p className="text-xl text-gray-600">
+        <h1 className="text-3xl font-bold max-sm:text-xl">Featured Products</h1>
+        <p className="text-xl text-gray-600 max-sm:text-base">
           Carefully curated selection of quality items at great prices.
         </p>
       </div>
@@ -19,7 +19,7 @@ function Cart() {
         {isLoading && <p>Loading...</p>}
         {error && <p>{error.message}</p>}
 
-        <div className="cart-container  grid grid-cols-4 gap-10 ">
+        <div className="cart-container grid grid-cols-4 gap-10 max-sm:flex-col max-sm:flex">
           {Array.isArray(data) &&
             data.map((item) => {
               return (

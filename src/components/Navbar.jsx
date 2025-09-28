@@ -64,7 +64,7 @@ function Navbar() {
         </div>
 
         {/* favourite, cart, profile */}
-        <div className="navbar-extra flex gap-5 cursor-pointer text-xl relative max-sm:gap-2 right-2 ">
+        <div className="navbar-extra flex gap-5 cursor-pointer text-xl relative max-sm:gap-2 right-3 ">
           <Link to="/cartItem/">
             <LiaShoppingCartSolid className="hover:text-blue-500 text-2xl max-sm:text-sm" />
           </Link>
