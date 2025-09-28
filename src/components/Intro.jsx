@@ -5,7 +5,7 @@ import "../index.css";
 
 function Intro() {
   return (
-    <div className="wrapper intro-container text-center">
+    <div className="wrapper intro-container text-center overflow-x-hidden">
       <div className="intro-logo inline-flex rounded-full justify-center bg-blue-200 h-20 w-20 text-4xl text-blue-600 max-sm:text-2xl max-sm:w-16 max-sm:h-16">
         <RiShoppingBag3Line />
       </div>

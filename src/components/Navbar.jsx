@@ -20,7 +20,7 @@ function Navbar() {
   };
 
   return (
-    <header className="navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
+    <header className="overflow-x-hidden navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
       <nav className="wrapper flex gap-5 items-center max-sm:flex justify-between">
         <div className="logo">
           <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-lg relative left-2">

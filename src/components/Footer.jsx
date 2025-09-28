@@ -5,7 +5,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 
 function Footer() {
   return (
-    <div className="wrapper footer-container flex justify-between max-sm:flex flex-col relative left-3">
+    <div className="overflow-x-hidden wrapper footer-container flex justify-between max-sm:flex flex-col relative left-3">
       <div>
         <Link to="/" className=" text-3xl font-bold ">
           ShopClean
