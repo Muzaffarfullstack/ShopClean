@@ -26,7 +26,7 @@ function Cart() {
                 <Link
                   to={`product/${item.title}`}
                   key={item.id}
-                  className=" border-0 shadow-lg rounded-xl w-[90%] relative left-2"
+                  className=" border-0 shadow-lg rounded-xl w-[90%] relative left-3"
                 >
                   <img
                     src={item.image}
@@ -42,7 +42,7 @@ function Cart() {
                     </p>
                   </div>
                   <button className="flex btn cart-btn border-0 bg-blue-500 rounded-xl cursor-pointer relative left-9 text-neutral-100">
-                    <IoCartOutline className="cart-btn-logo text-xl" />
+                    <IoCartOutline className="cart-btn-logo text-xl max-sm:w-[100%]" />
                     Add to Cart
                   </button>
                 </Link>
