@@ -23,7 +23,7 @@ function Navbar() {
     <header className="navbar-container relative top-4 max-sm:max-w-[642px] max-sm:overflow-hidden">
       <nav className="wrapper flex gap-5 items-center max-sm:flex justify-between">
         <div className="logo">
-          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-base relative left-1">
+          <NavLink className="navbar-link font-bold text-3xl hover:text-blue-500 max-sm:text-base relative left-2">
             ShopClean
           </NavLink>
         </div>
@@ -64,7 +64,7 @@ function Navbar() {
         </div>
 
         {/* favourite, cart, profile */}
-        <div className="navbar-extra flex gap-5 cursor-pointer text-xl relative max-sm:gap-2 ">
+        <div className="navbar-extra flex gap-5 cursor-pointer text-xl relative max-sm:gap-2 right-2 ">
           <Link to="/cartItem/">
             <LiaShoppingCartSolid className="hover:text-blue-500 text-2xl max-sm:text-sm" />
           </Link>
