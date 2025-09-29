@@ -62,7 +62,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
           </h1>
 
           <div className="cartItem-container flex justify-between max-sm:flex max-sm:flex-col border border-gray-50">
-            <div className="relative flex  max-sm:justify-center ">
+            <div className="relative flex  max-sm:justify-center max-sm:flex-wrap ">
               {Array.isArray(items) &&
                 items.filter(Boolean).map((item) => {
                   return (
