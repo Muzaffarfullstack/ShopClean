@@ -62,7 +62,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
           </h1>
 
           <div className="cartItem-container flex justify-between max-sm:flex max-sm:flex-col border border-gray-50">
-            <div className="relative flex  max-sm:justify-center max-sm:w-[100%]">
+            <div className="relative flex  max-sm:justify-center ">
               {Array.isArray(items) &&
                 items.filter(Boolean).map((item) => {
                   return (
@@ -117,7 +117,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
                   );
                 })}
             </div>
-            <div className="w-[250px order-summary flex flex-col max-sm:w-[542px] relative max-sm:left-2 max-sm:h-[400px] rounded-xl shadow-xl">
+            <div className="w-[250px] order-summary flex flex-col relative rounded-xl shadow-xl max-sm:w-[95%] max-sm:relative max-sm:left-2.5">
               <h1 className="text-xl font-bold">Order Summary</h1>
               <div className="flex justify-between text-gray-500 subtotal">
                 <p>Subtotal ({totalItems} items)</p>
