@@ -89,7 +89,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
                           className="border w-[30px] h-[30px] rounded-md cursor-pointer max-sm:w-[20px] max-sm:h-[20px]"
                           onClick={() => decreaseQty(item.id)}
                         >
-                          <p className="max-sm:relative max-sm:bottom-1">
+                          <p className="max-sm:relative max-sm:bottom-0.5">
                             {" "}
                             &#8722;
                           </p>
@@ -99,7 +99,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
                           className="border  w-[30px] h-[30px] rounded-md cursor-pointer max-sm:w-[20px] max-sm:h-[20px]"
                           onClick={() => increaseQty(item.id)}
                         >
-                          <p className="max-sm:relative max-sm:bottom-1">
+                          <p className="max-sm:relative max-sm:bottom-0.5">
                             &#43;
                           </p>
                         </button>
