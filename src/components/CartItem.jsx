@@ -23,7 +23,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
   const total = subtotal + tax;
 
   return (
-    <div className="wrap">
+    <div className="wrap overflow-x-hidden">
       <div className="cartItem-btn flex justify-between max-sm:flex max-sm:justify-around">
         <Link
           className="flex continue rounded-sm text-gray-500 cursor-pointer hover:bg-gray-300 hover:text-blue-600 transition-all"
@@ -40,9 +40,9 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
       </div>
 
       {items.length === 0 ? (
-        <div className="text-center h-[400px] relative top-20">
+        <div className="text-center h-[400px] relative top-20 ">
           <div className="flex justify-center">
-            <BiBox className="text-center relative  text-8xl text-gray-400" />
+            <BiBox className="text-center relative text-8xl text-gray-400" />
           </div>
           <h1 className="text-3xl font-bold">Your cart is empty</h1>
           <p className="text-gray-400 relative top-2">
@@ -57,16 +57,18 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
         </div>
       ) : (
         <div>
-          <h1 className="text-3xl font-bold quantity">Shopping Cart</h1>
+          <h1 className="text-3xl font-bold quantity relative max-sm:left-5">
+            Shopping Cart
+          </h1>
 
-          <div className="cartItem-container flex justify-between">
-            <div>
+          <div className="cartItem-container flex justify-between max-sm:flex max-sm:flex-col border border-gray-50">
+            <div className="relative flex max-sm:justify-center">
               {Array.isArray(items) &&
                 items.filter(Boolean).map((item) => {
                   return (
                     <div
                       key={item.id}
-                      className="shadow-md w-[542px] h-[120px] cart flex"
+                      className="shadow-md w-[542px] h-[120px] cart flex relative rounded-xl"
                     >
                       <img
                         src={item.image}
@@ -104,7 +106,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
                   );
                 })}
             </div>
-            <div className="w-[250px] shadow order-summary">
+            <div className="w-[250px order-summary flex flex-col max-sm:w-[542px] relative max-sm:left-2 max-sm:h-[400px] rounded-xl shadow-xl">
               <h1 className="text-xl font-bold">Order Summary</h1>
               <div className="flex justify-between text-gray-500 subtotal">
                 <p>Subtotal ({totalItems} items)</p>

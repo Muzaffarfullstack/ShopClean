@@ -5,7 +5,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 
 function Footer() {
   return (
-    <div className="overflow-x-hidden wrapper footer-container flex flex-col lg:flex-row lg:justify-between relative">
+    <div className=" wrapper footer-container flex flex-col lg:flex-row lg:justify-between relative">
       <div className="left-2 relative ">
         <Link to="/" className=" text-3xl font-bold ">
           ShopClean
@@ -31,7 +31,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col relative ">
+      <div className="flex flex-col relative max-sm:relative max-sm:left-3 max-sm:top-5">
         <p className="text-2xl font-bold">Company</p>
         <Link
           to="/about"
@@ -53,7 +53,7 @@ function Footer() {
         </Link>
       </div>
 
-      <div className="flex flex-col relative  bottom-2 p-2">
+      <div className="flex flex-col relative  bottom-2 p-2 max-sm:left-3 max-sm:top-8">
         <p className="text-2xl font-bold">Legal</p>
         <Link
           to="/"
