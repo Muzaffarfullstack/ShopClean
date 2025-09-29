@@ -23,7 +23,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
   const total = subtotal + tax;
 
   return (
-    <div className="wrap overflow-x-hidden">
+    <div className="wrap max-sm:overflow-x-hidden">
       <div className="cartItem-btn flex justify-between max-sm:flex max-sm:justify-around">
         <Link
           className="flex continue rounded-sm text-gray-500 cursor-pointer hover:bg-gray-300 hover:text-blue-600 transition-all"
@@ -56,13 +56,13 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
           </Link>
         </div>
       ) : (
-        <div>
+        <div className="max-sm:max-w-[640px]">
           <h1 className="text-3xl font-bold quantity relative max-sm:left-5">
             Shopping Cart
           </h1>
 
           <div className="cartItem-container flex justify-between max-sm:flex max-sm:flex-col border border-gray-50">
-            <div className="relative flex w-[100%] max-sm:justify-center">
+            <div className="relative flex  max-sm:justify-center max-sm:w-[100%]">
               {Array.isArray(items) &&
                 items.filter(Boolean).map((item) => {
                   return (
@@ -73,7 +73,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
                       <img
                         src={item.image}
                         alt=""
-                        className="cart-image rounded-md max-sm:w-[40px] max-sm:h-[40px]"
+                        className="cart-image rounded-md max-sm:w-3 max-sm:h-3"
                       />
                       <div className="flex flex-col w-[150px] price-title">
                         <p className="text-md font-medium max-sm:text-base">
@@ -84,27 +84,32 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
                         </p>
                       </div>
 
-                      <div className="quantity flex  w-28 justify-between">
+                      <div className="quantity flex  w-28 justify-between max-sm:gap-1 max-sm:relative max-sm:right-7">
                         <button
                           className="border w-[30px] h-[30px] rounded-md cursor-pointer max-sm:w-[20px] max-sm:h-[20px]"
                           onClick={() => decreaseQty(item.id)}
                         >
-                          &#8722;
+                          <p className="max-sm:relative max-sm:bottom-1">
+                            {" "}
+                            &#8722;
+                          </p>
                         </button>
                         <p className="font-bold">{item.qty}</p>
                         <button
                           className="border  w-[30px] h-[30px] rounded-md cursor-pointer max-sm:w-[20px] max-sm:h-[20px]"
                           onClick={() => increaseQty(item.id)}
                         >
-                          &#43;
+                          <p className="max-sm:relative max-sm:bottom-1">
+                            &#43;
+                          </p>
                         </button>
                       </div>
                       <div className="flex gap-10 relative left-10 top-7">
-                        <p className="font-bold">
+                        <p className="font-bold max-sm:hidden">
                           ${(item.price * item.qty).toFixed(2)}
                         </p>
                         <GoTrash
-                          className="relative top-1 cursor-pointer "
+                          className="relative top-1 cursor-pointer max-sm:relative max-sm:-left-10"
                           onClick={() => deleteItems(item.id)}
                         />
                       </div>
