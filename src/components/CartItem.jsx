@@ -62,41 +62,47 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
           </h1>
 
           <div className="cartItem-container flex justify-between max-sm:flex max-sm:flex-col border border-gray-50">
-            <div className="relative flex max-sm:justify-center">
+            <div className="relative flex w-[100%] max-sm:justify-center">
               {Array.isArray(items) &&
                 items.filter(Boolean).map((item) => {
                   return (
                     <div
                       key={item.id}
-                      className="shadow-md w-[542px] h-[120px] cart flex relative rounded-xl"
+                      className="shadow-md max-sm:max-w-[640px] max-sm:w-[95%] h-[120px] cart flex relative rounded-xl"
                     >
                       <img
                         src={item.image}
                         alt=""
-                        className="cart-image rounded-md"
+                        className="cart-image rounded-md max-sm:w-[40px] max-sm:h-[40px]"
                       />
                       <div className="flex flex-col w-[150px] price-title">
-                        <p className="text-md font-medium">{item.title}</p>
-                        <p className="font-bold">${item.price}</p>
+                        <p className="text-md font-medium max-sm:text-base">
+                          {item.title}
+                        </p>
+                        <p className="font-bold max-sm:text-sm">
+                          ${item.price}
+                        </p>
                       </div>
 
                       <div className="quantity flex  w-28 justify-between">
                         <button
-                          className="border w-[30px] h-[30px] rounded-md cursor-pointer"
+                          className="border w-[30px] h-[30px] rounded-md cursor-pointer max-sm:w-[20px] max-sm:h-[20px]"
                           onClick={() => decreaseQty(item.id)}
                         >
                           &#8722;
                         </button>
                         <p className="font-bold">{item.qty}</p>
                         <button
-                          className="border  w-[30px] h-[30px] rounded-md cursor-pointer"
+                          className="border  w-[30px] h-[30px] rounded-md cursor-pointer max-sm:w-[20px] max-sm:h-[20px]"
                           onClick={() => increaseQty(item.id)}
                         >
                           &#43;
                         </button>
                       </div>
                       <div className="flex gap-10 relative left-10 top-7">
-                        <p className="font-bold">${}</p>
+                        <p className="font-bold">
+                          ${(item.price * item.qty).toFixed(2)}
+                        </p>
                         <GoTrash
                           className="relative top-1 cursor-pointer "
                           onClick={() => deleteItems(item.id)}
