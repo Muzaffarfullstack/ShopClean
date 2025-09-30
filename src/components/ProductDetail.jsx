@@ -42,7 +42,7 @@ function ProductDetail({ addtoCart }) {
         <FaArrowLeft className="relative right-3 top-0.5 hover:text-blue-500" />
         Back
       </Link> */}
-      <div className=" inner-cart flex max-sm:flex-col max-sm:overflow-x-hidden max-sm:w-[90] max-sm:relative max-sm:top-10">
+      <div className=" inner-cart flex max-sm:flex-col max-sm:overflow-hidden max-sm:w-[90] max-sm:relative max-sm:top-10">
         <div className="max-w-xl max-sm:relative max-sm:w-[95%]">
           <img
             src={selectedItem.image}
