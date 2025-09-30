@@ -56,7 +56,7 @@ function CartItem({ items, deleteItems, clearCart, decreaseQty, increaseQty }) {
           </Link>
         </div>
       ) : (
-        <div className="max-sm:max-w-[640px]">
+        <div className="max-sm:max-w-[640px] max-sm:overflow-x-hiddennpm ">
           <h1 className="text-3xl font-bold quantity relative max-sm:left-5">
             Shopping Cart
           </h1>
